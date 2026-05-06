@@ -1,0 +1,154 @@
+:root {
+  /* Organic Palette */
+  --bg-color: #FDFCF8; /* Off-white, Rice Paper */
+  --bg-subtle: #F0EBE5; /* Stone */
+  --bg-card: #FEFEFA; /* Extremely light beige */
+  
+  --text-main: #2C2C24; /* Deep Loam / Charcoal */
+  --text-muted: #78786C; /* Dried Grass */
+  --text-light: #F3F4F1; /* Pale Mist */
+
+  --primary-color: #5D7052; /* Moss Green */
+  --primary-light: rgba(93, 112, 82, 0.1);
+  
+  --secondary-color: #C18C5D; /* Terracotta / Clay */
+  --secondary-light: rgba(193, 140, 93, 0.1);
+  
+  --accent-color: #E6DCCD; /* Sand / Beige */
+  --accent-foreground: #4A4A40; /* Bark */
+
+  --border-color: #DED8CF; /* Raw Timber */
+  --border-color-50: rgba(222, 216, 207, 0.5);
+
+  /* Shadows - Organic and tinted */
+  --shadow-sm: 0 2px 8px -2px rgba(93, 112, 82, 0.1);
+  --shadow-md: 0 4px 20px -2px rgba(93, 112, 82, 0.15); /* shadow-soft */
+  --shadow-lg: 0 10px 40px -10px rgba(193, 140, 93, 0.2); /* shadow-float */
+  --shadow-xl: 0 20px 40px -10px rgba(93, 112, 82, 0.15); /* deep lift */
+  --shadow-glow: 0 0 20px rgba(193, 140, 93, 0.4);
+
+  /* Spacing & Borders */
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem; /* 24px - 3xl */
+  --radius-full: 9999px;
+  
+  --max-width: 1280px; /* 7xl */
+  --max-width-md: 1024px; /* 5xl */
+  --max-width-sm: 896px; /* 4xl */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Global Noise Texture */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-main);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.3s ease;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container { padding: 0 2rem; }
+}
+
+.text-gradient {
+  color: var(--secondary-color);
+}
+
+/* Buttons - Global organic pills */
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  box-shadow: var(--shadow-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-xl);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-delay-1 { animation-delay: 0.2s; opacity: 0; }
+.animate-delay-2 { animation-delay: 0.4s; opacity: 0; }
+.animate-delay-3 { animation-delay: 0.6s; opacity: 0; }

@@ -1,0 +1,170 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: #ffffff; /* White background for light theme */
+  width: 90%;
+  max-width: 500px;
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  color: #1a1a1a; /* Dark text for readability */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Hide scrollbar for the modal content */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #666666;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000000;
+}
+
+.modal-header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.modal-app-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 1px solid #e2e8f0; /* Subtle border for light theme */
+  padding: 5px;
+  background: #ffffff;
+}
+
+.modal-app-info {
+  flex: 1;
+}
+
+.modal-app-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.modal-app-dev {
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.modal-app-stats {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-badge {
+  background: rgba(0, 0, 0, 0.05); /* Light gray badge background */
+  color: #555555; /* Dark gray text */
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 500;
+}
+
+.modal-install-btn {
+  display: block;
+  width: 100%;
+  background: #7bb554; /* Green color from the screenshot */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(123, 181, 84, 0.4);
+}
+
+.modal-install-btn:hover {
+  background: #6a9c48;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(123, 181, 84, 0.6);
+}
+
+.modal-gallery-container {
+  margin-bottom: 2rem;
+}
+
+.modal-gallery {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  /* Hide scrollbar */
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+.modal-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-screenshot {
+  height: 250px;
+  width: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-about h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.modal-about p {
+  color: #4b5563; /* Darker gray for readability on light theme */
+  line-height: 1.6;
+  font-size: 0.95rem;
+}

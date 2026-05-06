@@ -1,0 +1,96 @@
+.about-section {
+  padding: 8rem 0;
+  background-color: var(--bg-subtle);
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-header {
+  margin-bottom: 5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color-50);
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Wabi-Sabi Asymmetric Shapes */
+.feature-card:nth-child(1) { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+.feature-card:nth-child(2) { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+.feature-card:nth-child(3) { border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%; }
+.feature-card:nth-child(4) { border-radius: 80% 20% 50% 50% / 80% 25% 75% 20%; }
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-light);
+}
+
+.feature-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  transition: all 0.4s ease;
+}
+
+.feature-card:hover .feature-icon-wrapper {
+  background: var(--primary-color);
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
