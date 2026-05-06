@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Globe } from 'lucide-react';
 import Hero from './components/Hero';
 import AboutApp from './components/AboutApp';
 import AppScreenshots from './components/AppScreenshots';
@@ -10,17 +11,20 @@ import './Navbar.css';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const openModal = (e) => {
     e.preventDefault();
     setIsModalOpen(true);
+    setMenuOpen(false);
   };
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <div className="app-container">
       <nav className="navbar">
         <div className="container nav-container">
-          {/* User's logo should be named logo.png and placed in public/ */}
           <div className="logo">
             <img 
               src="/logo.png" 
@@ -33,10 +37,42 @@ function App() {
             />
             <span className="logo-name">Annapurna Daily Needs</span>
           </div>
+
+          {/* Desktop nav links */}
           <div className="nav-links">
             <a href="#about" className="nav-link">Features</a>
             <a href="#team" className="nav-link">Team</a>
-            <a href="#" onClick={openModal} className="nav-btn">Get App</a>
+            <div className="nav-actions">
+              <a href="https://annapurna-daily-needs.vercel.app/" target="_blank" rel="noopener noreferrer" className="nav-btn nav-btn-outline">
+                <Globe size={18} />
+                <span>Use on Web</span>
+              </a>
+              <a href="#" onClick={openModal} className="nav-btn">Get App</a>
+            </div>
+          </div>
+
+          {/* Hamburger button — mobile only */}
+          <button
+            className={`hamburger ${menuOpen ? 'open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          {/* Mobile dropdown — anchored inside pill */}
+          <div className={`mobile-menu ${menuOpen ? 'mobile-menu--open' : ''}`}>
+            <a href="#about" className="mobile-link" onClick={closeMenu}>Features</a>
+            <a href="#team" className="mobile-link" onClick={closeMenu}>Team</a>
+            <div className="mobile-menu-actions">
+              <a href="https://annapurna-daily-needs.vercel.app/" target="_blank" rel="noopener noreferrer" className="mobile-link mobile-link--btn mobile-link--btn-outline" onClick={closeMenu}>
+                <Globe size={16} />
+                <span>Use on Web</span>
+              </a>
+              <a href="#" onClick={openModal} className="mobile-link mobile-link--btn">Get App</a>
+            </div>
           </div>
         </div>
       </nav>
