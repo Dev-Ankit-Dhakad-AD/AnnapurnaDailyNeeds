@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Globe } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import Hero from './components/Hero';
 import AboutApp from './components/AboutApp';
 import AppScreenshots from './components/AppScreenshots';
@@ -88,6 +89,7 @@ function App() {
       <Footer openModal={openModal} />
       
       <InstallModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <Analytics />
     </div>
   );
 }
