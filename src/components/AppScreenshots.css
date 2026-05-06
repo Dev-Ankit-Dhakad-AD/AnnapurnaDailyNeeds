@@ -1,7 +1,13 @@
 .screenshots-section {
-  padding: 8rem 0;
+  padding: 4rem 0;
   background-color: var(--bg-subtle);
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .screenshots-section {
+    padding: 8rem 0;
+  }
 }
 
 .screenshots-gallery {
@@ -20,13 +26,19 @@
 
 .screenshot-card {
   flex: 0 0 auto;
-  width: 280px;
+  width: 220px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 4px solid var(--border-color);
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   transform: scale(0.95) rotate(-1.5deg);
+}
+
+@media (min-width: 768px) {
+  .screenshot-card {
+    width: 280px;
+  }
 }
 
 /* Alternate rotations for wabi-sabi organic feel */

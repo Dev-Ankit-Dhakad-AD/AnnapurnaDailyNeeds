@@ -1,9 +1,15 @@
 .hero-section {
   position: relative;
-  padding: 6rem 0 4rem;
+  padding: 5rem 0 3rem;
   background-color: var(--bg-color);
   overflow: hidden;
   z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 6rem 0 4rem;
+  }
 }
 
 /* Organic Blobs */
@@ -48,8 +54,15 @@
 .hero-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero-container {
+    text-align: left;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -79,9 +92,13 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 2.4rem;
   margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .hero-title { font-size: 3rem; }
 }
 
 @media (min-width: 768px) {
@@ -99,6 +116,13 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .hero-cta {
+    justify-content: flex-start;
+  }
 }
 
 .hero-image-wrapper {

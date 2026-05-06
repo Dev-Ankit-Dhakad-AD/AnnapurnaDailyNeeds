@@ -14,16 +14,22 @@
 }
 
 .modal-content {
-  background: #ffffff; /* White background for light theme */
-  width: 90%;
+  background: #ffffff;
+  width: 93%;
   max-width: 500px;
   border-radius: 20px;
-  padding: 2rem;
+  padding: 1.5rem;
   position: relative;
-  color: #1a1a1a; /* Dark text for readability */
+  color: #1a1a1a;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  max-height: 90vh;
+  max-height: 92vh;
   overflow-y: auto;
+}
+
+@media (min-width: 480px) {
+  .modal-content {
+    padding: 2rem;
+  }
 }
 
 /* Hide scrollbar for the modal content */
@@ -58,9 +64,21 @@
 
 .modal-header {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
   align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  .modal-header {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    align-items: center;
+  }
 }
 
 .modal-app-icon {
@@ -150,11 +168,17 @@
 }
 
 .modal-screenshot {
-  height: 250px;
+  height: 180px;
   width: auto;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 480px) {
+  .modal-screenshot {
+    height: 250px;
+  }
 }
 
 .modal-about h3 {

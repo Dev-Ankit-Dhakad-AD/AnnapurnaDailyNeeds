@@ -1,6 +1,12 @@
 .developers-section {
-  padding: 6rem 0;
+  padding: 4rem 0;
   background-color: var(--bg-subtle);
+}
+
+@media (min-width: 768px) {
+  .developers-section {
+    padding: 6rem 0;
+  }
 }
 
 .developers-grid {
