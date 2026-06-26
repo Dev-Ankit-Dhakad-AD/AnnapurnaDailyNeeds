@@ -43,7 +43,7 @@ function App() {
             <a href="#about" className="nav-link">Features</a>
             <a href="#team" className="nav-link">Team</a>
             <div className="nav-actions">
-              <a href="https://annapurna-daily-needs.vercel.app/" target="_blank" rel="noopener noreferrer" className="nav-btn nav-btn-outline">
+              <a href="https://annapurnadailyneeds.vercel.app/" target="_blank" rel="noopener noreferrer" className="nav-btn nav-btn-outline">
                 <Globe size={18} />
                 <span>Use on Web</span>
               </a>
@@ -67,7 +67,7 @@ function App() {
             <a href="#about" className="mobile-link" onClick={closeMenu}>Features</a>
             <a href="#team" className="mobile-link" onClick={closeMenu}>Team</a>
             <div className="mobile-menu-actions">
-              <a href="https://annapurna-daily-needs.vercel.app/" target="_blank" rel="noopener noreferrer" className="mobile-link mobile-link--btn mobile-link--btn-outline" onClick={closeMenu}>
+              <a href="https://annapurnadailyneeds.vercel.app/" target="_blank" rel="noopener noreferrer" className="mobile-link mobile-link--btn mobile-link--btn-outline" onClick={closeMenu}>
                 <Globe size={16} />
                 <span>Use on Web</span>
               </a>

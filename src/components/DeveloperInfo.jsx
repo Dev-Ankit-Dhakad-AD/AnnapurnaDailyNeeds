@@ -15,7 +15,7 @@ const developers = [
     id: 2,
     name: 'Ankit Dhakad',
     role: 'Co-Developer',
-    image: 'https://placehold.co/150x150/f97316/ffffff?text=AD',
+    image: '/ankit.jpeg',
     bio: 'Dedicated to writing clean, efficient code to power our delivery platform.',
     socials: { github: '#', linkedin: '#', email: 'mailto:#' }
   },
@@ -31,7 +31,7 @@ const developers = [
     id: 4,
     name: 'Anas Khan',
     role: 'Software Tester',
-    image: 'https://placehold.co/150x150/8b5cf6/ffffff?text=AK',
+    image: '/anas.jpeg',
     bio: 'Ensuring every feature works flawlessly for a bug-free shopping experience.',
     socials: { github: '#', linkedin: '#', email: 'mailto:#' }
   }
