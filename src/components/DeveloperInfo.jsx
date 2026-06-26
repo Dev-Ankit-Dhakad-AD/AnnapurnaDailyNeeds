@@ -50,7 +50,7 @@ const DeveloperInfo = () => {
           {developers.map((dev) => (
             <div key={dev.id} className="developer-card">
               <div className="dev-image-wrapper">
-                <img src={dev.image} alt={dev.name} className="dev-image" />
+                <img src={dev.image} alt={dev.name} className="dev-image" loading="lazy" />
               </div>
               <h3 className="dev-name">{dev.name}</h3>
               <p className="dev-role">{dev.role}</p>

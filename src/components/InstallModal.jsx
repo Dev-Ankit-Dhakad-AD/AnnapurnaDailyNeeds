@@ -40,7 +40,7 @@ const InstallModal = ({ isOpen, onClose }) => {
         <div className="modal-gallery-container">
           <div className="modal-gallery">
             {screenshots.map((src, index) => (
-              <img key={index} src={src} alt={`Screenshot ${index + 1}`} className="modal-screenshot" />
+              <img key={index} src={src} alt={`Screenshot ${index + 1}`} className="modal-screenshot" loading="lazy" />
             ))}
           </div>
         </div>
