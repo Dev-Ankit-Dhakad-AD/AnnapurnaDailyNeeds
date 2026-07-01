@@ -23,6 +23,7 @@
   width: 100%;
   max-width: var(--max-width);
   position: relative;
+  z-index: 50;
 }
 
 @media (min-width: 768px) {
@@ -46,7 +47,7 @@
   white-space: nowrap;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .logo-name {
     font-size: 1.6rem;
   }
@@ -71,12 +72,18 @@
 .nav-links {
   display: none;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 @media (min-width: 768px) {
   .nav-links {
     display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-links {
+    gap: 2rem;
   }
 }
 
@@ -109,6 +116,11 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  position: relative;
+  z-index: 1000;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .nav-btn-outline {
@@ -125,7 +137,7 @@
   transform: translateY(-2px);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav-btn {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;

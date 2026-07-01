@@ -7,7 +7,7 @@ const developers = [
     id: 1,
     name: 'Krishan Kumar Awasthi',
     role: 'Lead Developer',
-    image: 'https://placehold.co/150x150/22c55e/ffffff?text=KK',
+    image: '/krishna.jpeg',
     bio: 'Passionate about building seamless mobile experiences for everyday needs.',
     socials: { github: '#', linkedin: '#', email: 'mailto:#' }
   },
@@ -23,7 +23,7 @@ const developers = [
     id: 3,
     name: 'Lokendra Prajapati',
     role: 'UI/UX Developer',
-    image: 'https://placehold.co/150x150/3b82f6/ffffff?text=LP',
+    image: '/lokendra.png',
     bio: 'Crafting beautiful and intuitive interfaces that users love to interact with.',
     socials: { github: '#', linkedin: '#', email: 'mailto:#' }
   },
@@ -31,7 +31,7 @@ const developers = [
     id: 4,
     name: 'Anas Khan',
     role: 'Software Tester',
-    image: '/anas.jpeg',
+    image: '/anas.png',
     bio: 'Ensuring every feature works flawlessly for a bug-free shopping experience.',
     socials: { github: '#', linkedin: '#', email: 'mailto:#' }
   }
