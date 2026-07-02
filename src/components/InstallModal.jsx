@@ -33,7 +33,7 @@ const InstallModal = ({ isOpen, onClose }) => {
           </div>
         </div>
 
-        <a href="https://drive.google.com/uc?export=download&id=1QLiVKkluk6gZ2uwp0Vyyxl_DDKylzfFe" download="AnnapurnaDailyNeeds.apk" className="modal-install-btn" onClick={onClose}>
+        <a href="https://github.com/Dev-Ankit-Dhakad-AD/AnnapurnaDailyNeeds/releases/download/v1.0.0/annapurna.apk" download="AnnapurnaDailyNeeds.apk" className="modal-install-btn" onClick={onClose}>
           INSTALL
         </a>
 
